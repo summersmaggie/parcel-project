@@ -7,8 +7,8 @@ describe('parcels') do
     shoebox = Parcel.new(7.5,5,14,2)
     expect(shoebox.volume()).to(eq(525))
   end
-  it("will return the shipping cost based on multiple factors") do
-    shoebox = Parcel.new(7.5,5,14,2)
-    expect(shoebox.cost_to_ship()).to(eq(5))
+  it("will return the shipping cost based on time") do
+    shoebox_shipping = Parcel.new()
+    expect(shoebox_shipping.cost_to_ship()).to(eq(7))
   end
 end

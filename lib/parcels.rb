@@ -1,5 +1,6 @@
 class Parcel
-  def initialize(length, width, height, weight)
+  def initialize(time, length, width, height, weight)
+    @time = time
     @length = length
     @width = width
     @height = height
@@ -7,16 +8,15 @@ class Parcel
   end
 
   def volume
-    @shoebox_volume = @length * @width * @height
+    volume = @length * @width * @height
+    if volume < 3
+      @volume_cost = 0
+    elsif volume >= 3
+      @volume_cost = 2
+    end
   end
 
   def cost_to_ship
-    cost_factors = { "overnight" => 15, "two-day" => 10, "standard" => 5, "less than 3 pounds" => 0, "more than 3 pounds" => 2, "less than 1575 volume in inches" => 0, "greater than 1575 volume in inches" => 2 }
-
-
-
-
-    @cost = 0
-
+    result = @time + @weight
   end
 end

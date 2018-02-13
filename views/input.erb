@@ -1,0 +1,23 @@
+<h1>Find out what shipping your package will cost!</h1>
+
+<form action="/output">
+  <div class="form-group">
+    <label for="time">Select Delivery Time:</label>
+    <select class="form-control" id="time" name="time">
+      <option value="5">Standard</option>
+      <option value="10">2-Day</option>
+      <option value="15">Overnight</option>
+    </select>
+    <label for="length">Enter length:</label>
+    <input id="l" name="length" class="form-control" type="text">
+    <label for="width">Enter width:</label>
+    <input id="w" name="width" class="form-control" type="text">
+    <label for="height">Enter height:</label>
+    <input id="h" name="height" class="form-control" type="text">
+    <label for="weight">Enter weight:</label>
+    <input id="w" name="weight" class="form-control" type="text">
+
+  </div>
+
+  <button type="submit" class="btn">Go!</button>
+</form>
